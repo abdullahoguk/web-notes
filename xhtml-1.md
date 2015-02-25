@@ -41,3 +41,15 @@
 * link `<a href="url"> text </a>`  ("p", "h1"..."h6", "div", "pre", "address", "fieldset", "ins", "del")
 * image `<img src="image url" alt="loading failed" title="title" />`
 * link to image `<a href="url"> <img src="image url" alt="loading failed" title="title" /></a>`
+* Tables
+	* `<table>` Define table (`<table border="1" cellpadding="10" cellspacing="10">`)
+		* border
+		* cell padding: padding between cell border and text.
+		* cell sapcing: space between cells.
+	* `<tr>` Define a row in a table
+	* `<td>` Define a cell in a table
+	* `<caption>` Define a table caption
+	* `<td rowspan="3">` to define cell that has 3 row heigth
+	* `<td colspan="3">` to define a cell that has 3 column width
+	* `
+ 
