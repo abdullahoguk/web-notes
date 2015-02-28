@@ -42,7 +42,7 @@
 * image `<img src="image url" alt="loading failed" title="title" />`
 * link to image `<a href="url"> <img src="image url" alt="loading failed" title="title" /></a>`
    
-* Tables
+* **Tables**
 	* `<table>` Define table (`<table border="1" cellpadding="10" cellspacing="10">`)
 		* border
 		* cell padding: padding between cell border and text.
@@ -53,12 +53,32 @@
 	* `<td rowspan="3">` to define cell that has 3 row heigth
 	* `<td colspan="3">` to define a cell that has 3 column width
    
-* Div
+* **Div**
 	* `<div style="height: 200px; width: 250px; border: 1px solid black; margin-bottom: 20px;">`
 	* `<span style="color: green;">BOX </span>` 
    
 * `<ul>` Unordered List. to add sth to list `<li>` (<li>HTML</li> ...)
 * `<ol>` Ordered List. to add sth to list `<li>` (<li>HTML</li> ...)
 * `<dl>` Definition List. to add  definition `<dt>`, to add description `<dd>`
+   
+* **Forms**
+	* Input `<input type="name" name="namefield" />` (type should be name new input fields can have different names)
+	* Radiobutton `<input type="radio" name="name" />`(type should be radio and new radio buttons should have same names)
+	* Check box `<input type="checkbox" name="name" />` (type should be name new input fields can have different names)
+ 	* Button `<input type="submit" value="Send" />` (type should be button or submit)
+ 	* Text area `<textarea rows="5" cols="40"></textarea>`
+ 	* Drop Down Menu 
+ 		```
+ 		<select name="Nameofmenu">
+ 		<optgroup label="Label 1">
+ 		<option value="op1" >Option 1 </option>
+ 		<option value="op2" >Option 2 </option>
+	 	<optgroup label="Label 2">
+	 	<option value="op3" selected="selected" >Option 3 </option>
+	 	<option value="op4" >Option 4 </option>
+	 	```
+	 	opt3 will be shown by default.
+	* If you want to run check box or radio button by clicking text, add text and Radio Button/Checkbox in `</label>` tag
+	* to add frame, add components in `<fieldset>` tag. (`<legend>` tag can be used inside fieldset tag.)
+   
 * 
- 
