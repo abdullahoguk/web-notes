@@ -64,7 +64,7 @@
 * **Forms**
 	* Input `<input type="name" name="namefield" />` (type should be name new input fields can have different names)
 	* Radiobutton `<input type="radio" name="name" />`(type should be radio and new radio buttons should have same names)
-	* Check box `<input type="checkbox" name="name" />` (type should be name new input fields can have different names)
+	* Check box `<input type="checkbox" name="name" />` (type should be checkbox new input fields can have different names)
  	* Button `<input type="submit" value="Send" />` (type should be button or submit)
  	* Text area `<textarea rows="5" cols="40"></textarea>`
  	* Drop Down Menu 
