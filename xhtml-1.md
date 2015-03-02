@@ -1,5 +1,5 @@
 ##XHTML and HTML
-* Opening tag > `<tag_name>`  closing tag > `</tag_name>`
+* Opening tag: `<tag_name>` , closing tag: `</tag_name>`
 * in xhtml, tags are case sensitive but, in html they are not.
 * Example
 ```
@@ -19,7 +19,7 @@
   	</body>
 </html>
 ```
-* Every open tag should be closed
+* Every open tag must have been closed
 * `<html>` tells browser in which language the code has written
 * `<head>` 
 * `<title>` title of site will appear on the top of browser or tab
@@ -28,7 +28,7 @@
 * `<br />` end of line (to continue to paragraph from new line)
 * `h1` `h2`... `h6` create header
 * `<hr />` create horizontal line
-* <!-- "Comment" -->
+* `<!-- "Comment" -->`
 * `<pre>` Text will appear like how it is written in the code
 * `&nbsp` extara space
 * customizing text ("p", "h1"..."h6", "div", "pre", "address", "fieldset", "ins", "del")
@@ -46,7 +46,7 @@
 	* `<table>` Define table (`<table border="1" cellpadding="10" cellspacing="10">`)
 		* border
 		* cell padding: padding between cell border and text.
-		* cell sapcing: space between cells.
+		* cell spacing: space between cells.
 	* `<tr>` Define a row in a table
 	* `<td>` Define a cell in a table
 	* `<caption>` Define a table caption
@@ -57,8 +57,8 @@
 	* `<div style="height: 200px; width: 250px; border: 1px solid black; margin-bottom: 20px;">`
 	* `<span style="color: green;">BOX </span>` 
    
-* `<ul>` Unordered List. to add sth to list `<li>` (<li>HTML</li> ...)
-* `<ol>` Ordered List. to add sth to list `<li>` (<li>HTML</li> ...)
+* `<ul>` Unordered List. to add sth to list `<li>` eg: `<li>HTML</li> ...`
+* `<ol>` Ordered List. to add sth to list `<li>` eg: `<li>HTML</li> ...`
 * `<dl>` Definition List. to add  definition `<dt>`, to add description `<dd>`
    
 * **Forms**
@@ -80,4 +80,4 @@
 	 	opt3 will be shown by default.
 	* If you want to run check box or radio button by clicking text, add text and Radio Button/Checkbox in `</label>` tag
 	* to add frame, add components in `<fieldset>` tag. (`<legend>` tag can be used inside fieldset tag.)
-   
+
