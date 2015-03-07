@@ -30,7 +30,7 @@
 * `<hr />` create horizontal line
 * `<!-- "Comment" -->`
 * `<pre>` Text will appear like how it is written in the code
-* `&nbsp` extara space
+* `&nbsp` extara space   
 * customizing text ("p", "h1"..."h6", "div", "pre", "address", "fieldset", "ins", "del")
 	* `<strong>` 
 	* `<big>`
@@ -80,5 +80,7 @@
 	 	opt3 will be shown by default.
 	* If you want to run check box or radio button by clicking text, add text and Radio Button/Checkbox in `</label>` tag
 	* to add frame, add components in `<fieldset>` tag. (`<legend>` tag can be used inside fieldset tag.)
-* 
+   
+* **Head & Meta tags**
+
 
