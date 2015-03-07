@@ -22,7 +22,6 @@
 * Every open tag must have been closed
 * `<html>` tells browser in which language the code has written
 * `<head>` 
-* `<title>` title of site will appear on the top of browser or tab
 * `<body>` all content that will appear on the page.
 * `<p>` create paragraph
 * `<br />` end of line (to continue to paragraph from new line)
@@ -81,6 +80,14 @@
 	* If you want to run check box or radio button by clicking text, add text and Radio Button/Checkbox in `</label>` tag
 	* to add frame, add components in `<fieldset>` tag. (`<legend>` tag can be used inside fieldset tag.)
    
-* **Head & Meta tags**
-
-
+* **Head & Meta tags**   
+`<head>` things that will not apperar in page.   tags in below should used inside head tag.
+	* `<title>` title of site that will appear on the top of browser or tab    
+		`<title>This is a Page</title>`
+	* `<base>` default location to use files in that directory directly.    
+		`<base href="http://www.siteurl.com/filename" />`
+	* `<link>` to define relationship between html file and a file.   
+		`<link rel="stylesheet" media="screen" type="text/css" href="style.css">` 
+	* `<meta>` where keywords can defined in to be used by search engines.   
+		`<meta name="Keywords" content="keyword1, keyword 2">`
+	* 
