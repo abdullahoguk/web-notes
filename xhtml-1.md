@@ -37,8 +37,14 @@
 	* `<i>` italic
 	* `<sub>` 
 	* `<sup>`
-* link `<a href="url"> text </a>`  ("p", "h1"..."h6", "div", "pre", "address", "fieldset", "ins", "del")
-* image `<img src="image url" alt="loading failed" title="title" />`
+* link    
+	* `<a href="url" title="title of link"> text </a>`  ("p", "h1"..."h6", "div", "pre", "address", "fieldset", "ins", "del")
+	* to go somewhere in the page
+	type `<a name="xyx"></a>` to destination   
+	to add link to that destination type `<a href="#xyz"> text </a>`   
+	   
+
+* image `<img src="image url" alt="loading failed height=  300px" title="title" />`
 * link to image `<a href="url"> <img src="image url" alt="loading failed" title="title" /></a>`
    
 * **Tables**
@@ -48,6 +54,8 @@
 		* cell spacing: space between cells.
 	* `<tr>` Define a row in a table
 	* `<td>` Define a cell in a table
+	* `<th>` Define a header cell in a table
+
 	* `<caption>` Define a table caption
 	* `<td rowspan="3">` to define cell that has 3 row heigth
 	* `<td colspan="3">` to define a cell that has 3 column width
