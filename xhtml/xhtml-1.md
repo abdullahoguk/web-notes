@@ -98,4 +98,4 @@
 		`<link rel="stylesheet" media="screen" type="text/css" href="style.css">` 
 	* `<meta>` where keywords can defined in to be used by search engines.   
 		`<meta name="Keywords" content="keyword1, keyword 2">`
-	* 
+	
