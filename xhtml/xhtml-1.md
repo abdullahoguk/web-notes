@@ -24,6 +24,7 @@
 * `<head>` 
 * `<body>` all content that will appear on the page.
 * `<p>` create paragraph
+* `<blockquote>` to create quote. quote style can be defined in CSS.
 * `<br />` end of line (to continue to paragraph from new line)
 * `h1` `h2`... `h6` create header
 * `<hr />` create horizontal line
@@ -38,10 +39,16 @@
 	* `<sub>` 
 	* `<sup>`
 * link    
-	* `<a href="url" title="title of link"> text </a>`  ("p", "h1"..."h6", "div", "pre", "address", "fieldset", "ins", "del")
+	* `<a href="example.com" title="title of link"> text </a>`  ("p", "h1"..."h6", "div", "pre", "address", "fieldset", "ins", "del")
 	* to go somewhere in the page
 	type `<a name="xyx"></a>` to destination   
-	to add link to that destination type `<a href="#xyz"> text </a>`   
+	to add link to that destination type `<a href="#xyz"> text </a>` 
+	* to be opened in new tab, add `target="_blank"`    
+		`<a href="example.com" title="title of link" target="_blank"> text </a>`
+	* to link a html file called `asd.html`
+		* if asd.html and your file are in same directory, you can type name of file to href field. `asd.html`
+		* if asd.html is in a folder, you can type directory to href field. `folder1/folder2/asd.html`
+		* if asd.html is in up of current directory, type `..` to go up. `../asd.html`       
 	   
 
 * image `<img src="image url" alt="loading failed height=  300px" title="title" />`
