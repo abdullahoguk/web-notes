@@ -1,6 +1,14 @@
 
+
+
 h1  {color : grey;}
 
 p{color : blue;} 
+#first_id {color : #af4f43;
+		   background-color: silver;}
+.first_class {color : teal;}
 
-pre {color : green;}
+pre {color : fuchsia;}
+
+div {background-color: silver;
+}
