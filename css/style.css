@@ -10,5 +10,10 @@ p{color : blue;}
 
 pre {color : fuchsia;}
 
-div {background-color: silver;
+div {background: url('dnatur.jpg') no-repeat;
+	background-position: center ;
+}
+
+body {
+	background: url('natur.jpg') repeat scroll;
 }
