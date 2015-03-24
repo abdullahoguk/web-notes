@@ -38,7 +38,7 @@
 * **Colors**
 `aqua` `black` `blue` `fuchsia` `gray` `green` `lime` `maroon` `navy` 
 `olive` `purple` `red` `silver` `teal` white` `yellow`    
-or `#000000` ... `#FFFFFF`
+or `#000000` up to `#FFFFFF`
    
 * **Background** 
 	* Color > `background-color: blue;`
@@ -49,4 +49,6 @@ or `#000000` ... `#FFFFFF`
 		background-repeat: no-repeat;
 
 		```
-	* Position > `top left` , `center right` , 
+	* Position > `top left` , `center right` , `bottom right` ... or `x% y%` as `background-position: x% y%`
+	* You can use whole image as bg and image can be scrolled. `background: url('bg.jpg') no-repeat scroll;`
+	* 
