@@ -3,10 +3,12 @@
 
 h1  {color : grey;}
 
-p{color : blue;} 
+p{color : blue;
+} 
 #first_id {color : #af4f43;
 		   background-color: silver;}
-.first_class {color : teal;}
+
+.first_class {color : teal;text-align: right;}
 
 pre {color : fuchsia;}
 

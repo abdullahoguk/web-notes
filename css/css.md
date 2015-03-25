@@ -51,4 +51,18 @@ or `#000000` up to `#FFFFFF`
 		```
 	* Position > `top left` , `center right` , `bottom right` ... or `x% y%` as `background-position: x% y%`
 	* You can use whole image as bg and image can be scrolled. `background: url('bg.jpg') no-repeat scroll;`
-	* 
+* Text Alignment
+	```CSS
+	text-align: left;
+	text-align: center;
+	text-align: right;
+	text-align: justify;
+	```
+* Text Decoration
+```CSS
+text-decoration: none;
+text-decoration: underline;
+text-decoration: overline;
+text-decoration: line-through;
+text-decoration: blink;
+```
