@@ -24,7 +24,7 @@
 	#firstPrgrph {color : blue;}
 	```   
 * Class Selector: pretty same with id selector. Class using to apply style to more than one tag.  
-		```html
+	```html
 	<p class="firstclass">I am different</p>
 	<h2 class="firstclass">me too</h2>
 	```

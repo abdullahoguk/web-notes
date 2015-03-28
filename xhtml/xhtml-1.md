@@ -2,7 +2,7 @@
 * Opening tag: `<tag_name>` , closing tag: `</tag_name>`
 * in xhtml, tags are case sensitive but, in html they are not.
 * Example
-```
+```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -82,7 +82,7 @@
  	* Button `<input type="submit" value="Send" />` (type should be button or submit)
  	* Text area `<textarea rows="5" cols="40"></textarea>`
  	* Drop Down Menu 
- 		```
+ 		```html
  		<select name="Nameofmenu">
  		<optgroup label="Label 1">
  		<option value="op1" >Option 1 </option>
