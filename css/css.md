@@ -37,7 +37,7 @@
    
 * **Colors**
 `aqua` `black` `blue` `fuchsia` `gray` `green` `lime` `maroon` `navy` 
-`olive` `purple` `red` `silver` `teal` white` `yellow`    
+`olive` `purple` `red` `silver` `teal` `white` `yellow`    
 or `#000000` up to `#FFFFFF`
    
 * **Background** 
@@ -81,6 +81,16 @@ or `#000000` up to `#FFFFFF`
 	* Space between letters: `letter-spacing: 13px;`
 	* Space between words: `word-spacing: 12px;`
 	* Direction of text (left or right): `direction: rtl;` , `direction: ltr;`
-	* 
+	   
+
+	* Fonts
+		
+		* Custom font
+			`font-family: "Monospace", Times, serif;`
+		* Font style
+			`font-style: italic;` , `font-style: oblique;` or `font-style: normal;`
+		* Font size
+			`font-size: 13px;`
+
 
 
