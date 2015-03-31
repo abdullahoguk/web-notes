@@ -91,6 +91,9 @@ or `#000000` up to `#FFFFFF`
 			`font-style: italic;` , `font-style: oblique;` or `font-style: normal;`
 		* Font size
 			`font-size: 13px;`
+		Other
+		`font-variant: small-caps` makes all letters uppercase
+		`font-weight: bold;` makes all letters bold
 
 
 
