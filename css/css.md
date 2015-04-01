@@ -83,7 +83,7 @@ or `#000000` up to `#FFFFFF`
 	* Direction of text (left or right): `direction: rtl;` , `direction: ltr;`
 	   
 
-	* Fonts
+	* **Fonts**
 		
 		* Custom font
 			`font-family: "Monospace", Times, serif;`
@@ -95,5 +95,10 @@ or `#000000` up to `#FFFFFF`
 		`font-variant: small-caps` makes all letters uppercase
 		`font-weight: bold;` makes all letters bold
 
+	* **Links**
+		* to customize unvisited link `a:link`
+		* to customize visited link `a:visited`
+		* to customize style when hovering on link `a:hover`
+		* to customize style when click on link `a:active`
 
 
