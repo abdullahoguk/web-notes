@@ -2,6 +2,8 @@
 <html>
     <head>
     	<meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Movie Project</title>
     </head>
 
@@ -10,23 +12,23 @@
             <h1>Movie Database Project</h1>
         </header>
 
-        <nav>
-            <div>
+        <nav class="navigation">
+            <div class="select_users">
                 <h2><a href="#"> UserName </a></h2>
             </div>
-            <ul>
+            <ul class= "users">
                 <li><a href="#"> List of other users</a></li>
                 <li><a href="#"> List of other users</a></li>
                 <li><a href="#"> List of other users</a></li>
                 <li><a href="#"> List of other users</a></li>
-            </ul>
+            </ul class= "admin">
              <ul>
                 <li><a href="#"> Manage Users</a></li>
                 <li><a href="#"> Manage Movies</a></li>
             </ul>
         </nav>
 
-        <nav>
+        <nav class= "favs">
             <h2>Favourites</h2>
              <ul>
                 <li><a href="#"> Movie 1</a></li>
@@ -35,40 +37,43 @@
             </ul>
         </nav>
 
-        <section>
+        <section class= "movie_list">
             <h2>Hi. (username)</h2>
-            <p>Here is some movies you might like.Click on the heart icon to add them into your favourates list.</p>
+            <p class= "welcome">Here is some movies you might like.Click on the heart icon to add them into your favourates list.</p>
             <ul>
                 <li>
                     <figure>
-                        <a href="#"> Thumbnail of the movie</a>
+                        <a href="#"> <img class="thumbnail" alt= "Thumbnail" src= "images-movies/movie-fail-low.png"></a>
                         <figcaption>
                             <h3><a href="#"> Movie title </a></h3>
-                            <div>Movie Description</div>
+                            <div class="description">Movie Description</div>
+                        </figcaption>
+                    </figure>
+                </li>
+               <li>
+                    <figure>
+                        <a href="#"> <img class="thumbnail" alt= "Thumbnail" src= "images-movies/movie-fail-low.png"></a>
+                        <figcaption>
+                            <h3><a href="#"> Movie title </a></h3>
+                            <div class="description">Movie Description</div>
                         </figcaption>
                     </figure>
                 </li>
                 <li>
-                    <figure><a href="#"> Thumbnail of the movie</a>
+                    <figure>
+                        <a href="#"> <img class="thumbnail" alt= "Thumbnail" src= "images-movies/movie-fail-low.png"></a>
                         <figcaption>
                             <h3><a href="#"> Movie title </a></h3>
-                            <div>Movie Description</div>
+                            <div class="description">Movie Description</div>
                         </figcaption>
                     </figure>
                 </li>
                 <li>
-                    <figure><a href="#"> Thumbnail of the movie</a>
+                    <figure>
+                        <a href="#"> <img class="thumbnail" alt= "Thumbnail" src= "images-movies/movie-fail-low.png"></a>
                         <figcaption>
                             <h3><a href="#"> Movie title </a></h3>
-                            <div>Movie Description</div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure><a href="#"> Thumbnail of the movie</a>
-                        <figcaption>
-                            <h3><a href="#"> Movie title </a></h3>
-                            <div>Movie Description</div>
+                            <div class="description">Movie Description</div>
                         </figcaption>
                     </figure>
                 </li>
@@ -76,7 +81,7 @@
         </section>
 
         <footer>
-            <p><b>Movie Project</b> | copyright © Abdullah Öğük MMXV  </p>
+            <p><b>Movie Project</b> | copyright © <a href="mailto:abdullahoguk@gmail.com"> Abdullah Öğük</a> MMXV  </p>
 
         </footer>
 	  
