@@ -34,7 +34,19 @@
 	```css
 	.firstclass {color : yellow;}
 	``` 
-   
+
+* to custimize a child tag where is inside a tag.
+	`parentTag.classNameofParentTag child_tag`
+	```html
+	<nav class= "c1">
+		<p>Paragraph<p>
+	</nav>
+	```
+     
+     ```css
+     nav.c1 p{style...}
+     ```
+      
 * **Colors**   
 `aqua` `black` `blue` `fuchsia` `gray` `green` `lime` `maroon` `navy` 
 `olive` `purple` `red` `silver` `teal` `white` `yellow`    
