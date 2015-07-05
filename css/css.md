@@ -46,7 +46,12 @@
      ```css
      nav.c1 p{style...}
      ```
-      
+ * for global decleration `*`
+ 	```css
+ 	* {
+ 		font-family: sans-serif;
+ 	}
+ 	```
 * **Colors**   
 `aqua` `black` `blue` `fuchsia` `gray` `green` `lime` `maroon` `navy` 
 `olive` `purple` `red` `silver` `teal` `white` `yellow`    
