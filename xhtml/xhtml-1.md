@@ -20,9 +20,9 @@
 </html>
 ```
 * Every open tag must have been closed
-* `<html>` tells browser in which language the code has written
+* `<html>` tells browser in which language the code has written.
 * `<head>` 
-* `<body>` all content that will appear on the page.
+* `<body>` all content that appear on the page.
 * `<p>` create paragraph
 * `<blockquote>` to create quote. quote style can be defined in CSS.
 * `<br />` end of line (to continue to paragraph from new line)
@@ -71,8 +71,8 @@
 	* `<div style="height: 200px; width: 250px; border: 1px solid black; margin-bottom: 20px;">`
 	* `<span style="color: green;">BOX </span>` 
    
-* `<ul>` Unordered List. to add sth to list `<li>` eg: `<li>HTML</li> ...`
-* `<ol>` Ordered List. to add sth to list `<li>` eg: `<li>HTML</li> ...`
+* `<ul>` Unordered List. to add sth to list `<li>` eg: `<li>HTML</li> ...`.   
+* `<ol>` Ordered List. to add sth to list `<li>` eg: `<li>HTML</li> ...`.    
 * `<dl>` Definition List. to add  definition `<dt>`, to add description `<dd>`
    
 * **Forms**
