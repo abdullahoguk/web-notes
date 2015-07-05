@@ -1,1 +1,190 @@
-style.css
+* {
+ 		font-family: sans-serif;
+ 		font-size: 16px;
+ 	}
+
+header{
+	height: 50px;
+	border-bottom: 1px solid gray;
+	background-color: #F1F1F1;
+}
+
+header h1{
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-left: 50px;
+	line-height: 50px;
+}
+
+.select_users h2 a{
+	font-weight: bold;
+	font-size: 0.9em;
+	color: black;
+	text-decoration: none;
+}
+
+.select_users h2 a:hover{
+	color: #A32824;
+
+}
+.select_users{
+	position: absolute;
+	right: 65px;
+	top: 15px;
+}
+
+ul.users, ul.admin {
+	position: absolute;
+	right: 0;
+	border-left: 1px solid gray;
+	border-bottom: 1px solid gray;
+	background-color: #F1F1F1;
+}
+
+ul.users{
+	width: 200px;
+	display: none;
+}
+
+ul.admin{
+	width: 150px;
+	
+}
+
+ul.users a, ul.admin a{
+	text-decoration: none;
+	color: black;
+}
+.users li a, .admin li a{
+	font-size: 0.75em;
+	padding: 5px;
+	display: block;
+}
+
+.users li a:hover, .admin li a:hover{
+	background-color: #A32824;
+	color: white;
+
+}
+
+.favs_list{
+	float: left;
+	width: 175px;
+	margin-left: 45px;
+}
+
+.favs_list h2{
+	font-size: 0.8em;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
+
+ul.favs{
+	width: 170px;
+}
+
+ul.favs li a{
+	display: block;
+	font-size: 0.75em;
+	text-decoration: none;
+	color: black;
+	padding: 7px 5px 7px 5px;
+}
+
+ul.favs li a:hover{
+	color: white;
+	background-color:#A32824;
+}
+
+.movie_list, section.movie_single{
+	margin-left: 225px;
+	width: 610px;
+	border: 1px dotted gray;
+}
+
+.movie_list{
+	padding-top: 10px;
+}
+
+.welcome{
+	font-size: 0.8em;
+	text-align: justify;
+	padding: 10px 10px 20px 10px;
+	border-bottom: 1px dotted gray;
+}
+
+.movie_list h2, .movie_single h2{
+	font-size: 1.3em;
+	padding: 5px 10px 10px 10px;
+}
+
+
+
+.movie_list ul{
+	padding: 20px;
+}
+
+.movie_list li{
+	padding: 10px;
+}
+
+.movie_list h3 a{
+	font-size: 1.1em;
+	color: #438BC5;
+	font-weight: bold;
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom:0.5em;
+	text-decoration: blink; 
+}
+.movie_list h3 a:hover{
+	text-decoration: underline;
+}
+
+.thumbnail{
+	height: 178px;
+	width: 100px;
+}
+
+.movie_list figcaption{
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 20px;
+}
+
+.movie_list .description{
+	font-size: 0.75em;
+	width:400px;
+	text-align: justify;
+}
+
+footer{
+	clear: both;
+	height: 60px;
+	border-top: 1px dotted gray;
+	border-bottom: 1px dotted gray;
+	margin-top: 30px;
+}
+
+footer p{
+	height: 60px;
+	margin-left: 50px;
+	font-size: 0.75em;
+	font-weight:bold; 
+}
+
+footer a ,b{
+	font-size: inherit;
+	color: black;
+
+}
+
+footer a:hover{
+	color: #A32824;
+}
+
+
+
+

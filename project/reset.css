@@ -5,7 +5,7 @@
 }
 
 html{
-	color: :#000;
+	color: #000;
 	background: #FFF;
 }
 
@@ -15,7 +15,7 @@ body, div, ul, li, h1, h2, h3, input, p, th, td, figure, figcaption{
 }
 
 table{
-	border-collapse:  collapse;
+	border-collapse: collapse;
 	border-spacing: 0;
 }
 
@@ -30,7 +30,8 @@ th{
 }
 
 ul, li{
-	list-style: : none;
+	list-style: none;
+	
 }
 
 h1, h2, h3{
