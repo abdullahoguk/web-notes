@@ -33,7 +33,7 @@ header h1{
 	top: 15px;
 }
 
-ul.users, ul.admin {
+ul.users_menu, ul.admin_menu {
 	position: absolute;
 	right: 0;
 	border-left: 1px solid gray;
@@ -41,30 +41,85 @@ ul.users, ul.admin {
 	background-color: #F1F1F1;
 }
 
-ul.users{
+ul.users_menu{
 	width: 200px;
 	display: none;
 }
 
-ul.admin{
+ul.admin_menu{
 	width: 150px;
 	
 }
 
-ul.users a, ul.admin a{
+ul.users_menu a, ul.admin_menu a{
 	text-decoration: none;
 	color: black;
 }
-.users li a, .admin li a{
+.users_menu li a, .admin_menu li a{
 	font-size: 0.75em;
 	padding: 5px;
 	display: block;
 }
 
-.users li a:hover, .admin li a:hover{
+.users_menu li a:hover, .admin_menu li a:hover{
 	background-color: #A32824;
 	color: white;
 
+}
+
+
+.admin_users{
+	margin-top: 40px;
+	margin-left: 50px;
+	}
+
+.admin_users h2{
+	font-size: 1.25em;
+	margin-bottom: 20px;
+}
+
+.admin_table{
+	border-spacing: 2px;
+	border-collapse: separate;
+}
+
+.admin_table th{
+	font-weight: bold;
+	text-align: left;
+	background-color: #F1F1F1;
+}
+
+
+.admin_table th,.admin_table td, .admin_table input{
+	height: 35px;
+	width: 200px;
+}
+
+th.admin_col, td.deletecell, td.insertcell{
+	width: 80px;
+}
+
+.admin_table th, .admin_table input{
+	padding-left: 5px;
+	padding-right: 5px;
+} 
+
+.admin_table input{
+	font-size: 0.9em;
+	outline: none;
+	border:none;
+}
+
+input{
+	outline: none;
+	border:none;}
+
+.admin_table input:focus{
+	background-color: #FEE5AC
+}
+
+.admin_table th,.admin_table td{
+	border:1px solid black;
 }
 
 .favs_list{
@@ -158,6 +213,51 @@ ul.favs li a:hover{
 	font-size: 0.75em;
 	width:400px;
 	text-align: justify;
+}
+
+
+.movie_player{
+	width: 608px;
+	height: 344px;
+
+}
+
+.movie_single h3{
+	font-size: 1.3em;
+	padding: 10px;
+}
+
+.movie_single p{
+	font-size: 0.8em;
+	padding: 10px;
+}
+
+.movie_single .description{
+	font-size: 0.75em;
+	min-height: 80px;
+	text-align: justify;
+}
+
+.actions{
+	position: relative;
+	height: 37px;
+	border-bottom: 1px solid #CCC;
+}
+
+.actions .add_remove {
+	position: absolute;
+	right: 10px;
+}
+
+.actions .add_remove p{
+	font-size: 0.75em;
+	font-weight: bold;
+	color: #999;
+}
+
+.actions .add_remove p:hover{
+	color: black;
+	border-bottom: 3px solid #993300;
 }
 
 footer{
