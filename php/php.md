@@ -26,8 +26,14 @@
     * `$array_name[] = 1` adds number 1 to the end of array.
     * in PHP 5.4 you can define array as `$array=[E1,e2,e3]`
     * Associative array `$assocArray = array("first_name" => "John", "last_name"=>"Stevens");` and we can get name with `$assocArray[first_name]`
-    * 
 
+* **Data Types**
+
+* **Control Structures**
+
+* **Functions**
+
+* **Building Web Pages with PHP**
 
 
 
