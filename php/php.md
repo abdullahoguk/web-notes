@@ -11,7 +11,7 @@
     * variable names are case sensetive (`Var` and `var` are different.)
     * Reserved words 
     ```
-    ''abstract', 'and', 'array', 'as', 'break', 'case', 'catch', 'class', 'clone', 'const', 'continue', 'declare', 'default', 'die', 'do', 'echo', 'else', 'elseif', 'empty', 'enddeclare', 'endfor', 'endforeach', 'endif', 'endswitch', 'endwhile', 'eval', 'exit', 'extends', 'final', 'for', 'foreach', 'function', 'global', 'goto', 'if', 'implements', 'include', 'include_once', 'instanceof', 'insteadof', 'interface', 'isset', 'list', 'namespace', 'new', 'or', 'print', 'private', 'protected', 'public','return', 'static', 'switch', 'throw', 'trait', 'try', 'use', 'var', 'while', 'xor'  
+    'abstract', 'and', 'array', 'as', 'break', 'case', 'catch', 'class'    'clone', 'const', 'continue', 'declare', 'default', 'die', 'do', 'echo'    'else', 'elseif', 'empty', 'enddeclare', 'endfor', 'endforeach', 'endif'   'endswitch', 'endwhile', 'eval', 'exit', 'extends', 'final', 'for'   'foreach', 'function', 'global', 'goto', 'if', 'implements', 'include'   'include_once', 'instanceof', 'insteadof', 'interface', 'isset', 'list'   'namespace', 'new', 'or', 'print', 'private', 'protected'    'public','return', 'static', 'switch', 'throw', 'trait', 'try', 'use'   'var', 'while', 'xor'  
     ``` for more at http://php.net/manual/en/reserved.php
     * `.=` is concatenate equals.
     * `strtolower("String")`, `strtoupper("String") `, `ucfirst("<String>`, `ucwords(String)`
@@ -35,5 +35,15 @@
 
 * **Building Web Pages with PHP**
 
+* **Working with Forms and Form Data**
 
+* **Working with Cookies and Sessions**
+
+* **MySQL Basics**
+
+* **Using PHP to Access MySQL**
+
+* **Building a Content Management System (CMS)**
+
+* **17- Using Site Navigation to Choose Content**
 
