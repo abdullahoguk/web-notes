@@ -1,38 +1,119 @@
 ##PHP
 * All PHP codes should be inside of `<?php [PHPcode]  ?>` tag.
 * Extension of file should be `.php`.
-* `echo` outputs string;
-* `.` concatenates two strings. `echo "Hello" . "World!";`
+* `echo` outputs.  `echo "Hello<br/>World"`
+* `.` concatenates two strings. (like `.` in Java) `echo "Hello" . "World!";` 
 * `//` or `#` for single line comments.
 * `/* Comment*/` for multiple line comments.
 * Php codes pocesses by apache and can not be shown in page source in browser.
 * **Variables**
-    * to define variable name `$var_name`
+    * to define variable name `$var_name` `echo "Hello $user"` = `echo "Hello {$user}"`
     * variable names are case sensetive (`Var` and `var` are different.)
-    * Reserved words 
-        `abstract` `and` `array` `as` `break` `case` `catch` `class` `clone` `const` `continue` `declare` `default` `die` `do` `echo`, `else`, `elseif` `empty` `enddeclare` `endfor` `endforeach` `endif` `endswitch` `endwhile` `eval` `exit` `extends` `final` `for` `foreach` `function` `global` `goto`, `if` `implements` `include` `include_once` `instanceof` `insteadof` `interface` `isset` `list` `namespace` `new` `or` `print` `private` `protected` `public` `return` `static` `switch` `throw` `trait` `try` `use` `var` `while` `xor`  
-    for more at http://php.net/manual/en/reserved.php
+    * Don't use `-` and multiple `_` when defininig variable `$like-that` `$__like that`
+    * `gettype($var)` returns type of variable.
+    * Reserved words    
+        `abstract` `and` `array` `as` `break` `case` `catch` `class` `clone` `const` `continue` `declare` `default` `die` `do` `echo`, `else`, `elseif` `empty` `enddeclare` `endfor` `endforeach` `endif` `endswitch` `endwhile` `eval` `exit` `extends` `final` `for` `foreach` `function` `global` `goto` `if` `implements` `include` `include_once` `instanceof` `insteadof` `interface` `isset` `list` `namespace` `new` `or` `print` `private` `protected` `public` `return` `static` `switch` `throw` `trait` `try` `use` `var` `while` `xor`  and for more at http://php.net/manual/en/reserved.php
     * `.=` is concatenate equals.
-    * `strtolower("String")`, `strtoupper("String") `, `ucfirst("<String>`, `ucwords(String)`
+    * `strtolower("String")`, `strtoupper("String")`, `ucfirst("String")`, `ucwords("String")`
     * `trim(" Str ing ")` deletes spaces in beginning and ending.
     * `strlen("String")` returns the length of the string. 
     * `str_replace("replace this ", "with that")`.
     * `strstr("string","find")` finds "find" in "string".
-   
+    * `str_repeat($var, 4)` repeats $var 4 times.
+    * `rand()` or `rand(min,max)` returns random number.
+    * `is_int($integer)` , `is_float($float)`, `is_numeric($var)`
+    * Boolean returns "1" as string when it is true, returns nothing when it not true.
+    * `null` or `NULL` is nothing and if a variable has been not set, its value is `NULL`     
+    `is_null($var)` `is_set($var)`
+    * `empty($var)` returns true when $var is empty and in PHP `""`, `null`, `0`, `0.0`, `"0"`, `false` and `array()` considered as empty.     
+    * `settype($var, "type")`  or `(type)$var` converts  var to type.
+        (Type => `string`, `int`, `integer`, `float`, `array`, `bool`, `boolean`)
+    * `define("VAR_NAME", value)` defines a constant.
+
+ 
 * **Arrays**
     * `$array_name = array();` defines empty array.   
       `$mixed = array(6 ,"str", "dog", array(1,2,3))`
     * `$array_name[] = 1` adds number 1 to the end of array.
     * in PHP 5.4 you can define array as `$array=[E1,e2,e3]`
     * Associative array `$assocArray = array("first_name" => "John", "last_name"=>"Stevens");` and we can get name with `$assocArray[first_name]`
-
-* **Data Types**
+    * `print_r($array)` returns whole array to output.
+    * `count($array)` returns number of items in array.
+    * `max($array)` and `min($array)` returns max/min values in array. 
+    * `sort($array)` and `rsort($array)` sorts array ascending/descending order. 
+    * `implode("seperator",$array)` returns array as string that we want.
+        more at https://secure.php.net/manual/en/ref.array.php
 
 * **Control Structures**
+    * **If** `if (logical_exp){statment}`
+    * **If-Elseif-Else** 
+    ```php
+    if (logical_exp){
+    statment}
+    elseif(logical_exp){
+    statment}
+    else{
+    statment}
+    ```
+    * `==` means equal and `===` meas idendical.
+    * `>`, `<`, `>=`, `<=`, `<>`, `!=`, `!==`, `&&`, `||`, `!`
+    
+
+    * **Switch-Case**
+        ```php
+        switch($var){
+        case value1: statement; break;
+        case value2: statement; break;
+        case value3: case value4: statement; break;
+        ...
+        default: statement; break;
+        }
+        ```
+
+    * **While loop**
+    ```php
+    while(expression){
+    statements;
+    }
+    ```
+    * **For loop**
+    ```php
+    for(initial; control; each){
+    statements
+    }
+    ```
+    * **Foreach loop**
+    ```php
+    foreach($array as $value)
+    statements; 
+    ```
+    current element in the array assigns to $value
+     ```php
+    foreach($array as $key => $value)
+    statements; 
+    ```
+    * `continue();` skips current. (continue() == continue(1) 1 s the level f loop, if there is a loop inside loop and if it is 2, it skips current state of both loops.)
+* Array Pointer `next($array)`, `current($array)`, `reset($array)` 
+* Assigments are also a regular experession. If variable succesfully asigned then it returns true.
+```php
+while($var = current($array)){
+    Statements;
+}
+``` this loops run until it gets end of the array
 
 * **Functions**
+    * 
+    ```php
+    function func_name(parameters_optional=defaultvalue){
+    statements;
+    return value_optional;
+    }
+    ```
+    * Functions can be used before it is defined.
 
 * **Building Web Pages with PHP**
+
+
 
 * **Working with Forms and Form Data**
 
