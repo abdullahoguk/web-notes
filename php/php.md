@@ -12,7 +12,8 @@
     * Reserved words 
     ```
     'abstract', 'and', 'array', 'as', 'break', 'case', 'catch', 'class'    'clone', 'const', 'continue', 'declare', 'default', 'die', 'do', 'echo'    'else', 'elseif', 'empty', 'enddeclare', 'endfor', 'endforeach', 'endif'   'endswitch', 'endwhile', 'eval', 'exit', 'extends', 'final', 'for'   'foreach', 'function', 'global', 'goto', 'if', 'implements', 'include'   'include_once', 'instanceof', 'insteadof', 'interface', 'isset', 'list'   'namespace', 'new', 'or', 'print', 'private', 'protected'    'public','return', 'static', 'switch', 'throw', 'trait', 'try', 'use'   'var', 'while', 'xor'  
-    ``` for more at http://php.net/manual/en/reserved.php
+    ``` 
+    for more at http://php.net/manual/en/reserved.php
     * `.=` is concatenate equals.
     * `strtolower("String")`, `strtoupper("String") `, `ucfirst("<String>`, `ucwords(String)`
     * `trim(" Str ing ")` deletes spaces in beginning and ending.
@@ -45,5 +46,5 @@
 
 * **Building a Content Management System (CMS)**
 
-* **17- Using Site Navigation to Choose Content**
+* **Using Site Navigation to Choose Content**
 
