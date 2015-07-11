@@ -8,6 +8,9 @@
 		Username: <input type="text" name="username" value=""/><br/>
 		Password: <input type="password" name="password" value=""/><br/><br/>
 		<input type="submit" name="submit" value="Submit"/> 
+	    <?php $link_name = "Second Page"; $id= 2;?>
+	    <a href="second_page.php?id=<?php echo $id;?>"><?php echo $link_name; ?></a>
+
 	</form>
 
 </body>

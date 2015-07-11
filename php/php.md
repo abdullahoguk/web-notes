@@ -1,13 +1,13 @@
 ##PHP
 * All PHP codes should be inside of `<?php [PHPcode]  ?>` tag.
 * Extension of file should be `.php`.
-* `echo` outputs.  `echo "Hello<br/>World"`
+* `echo` outputs code to html . `echo "Hello<br/>World"`
 * `.` concatenates two strings. (like `.` in Java) `echo "Hello" . "World!";` 
 * `//` or `#` for single line comments.
 * `/* Comment*/` for multiple line comments.
 * Php codes pocesses by apache and can not be shown in page source in browser.
 * **Variables**
-    * to define variable name `$var_name` `echo "Hello $user"` = `echo "Hello {$user}"`
+    * to define variable name `$var_nam e` `echo "Hello $user"` = `echo "Hello {$user}"`
     * variable names are case sensetive (`Var` and `var` are different.)
     * Don't use `-` and multiple `_` when defininig variable `$like-that` `$__like that`
     * `gettype($var)` returns type of variable.
@@ -88,11 +88,11 @@
     statements; 
     ```
     current element in the array assigns to $value
-     ```php
+    ```php
     foreach($array as $key => $value)
     statements; 
     ```
-    * `continue();` skips current. (continue() == continue(1) 1 s the level f loop, if there is a loop inside loop and if it is 2, it skips current state of both loops.)
+    * `continue();` skips current. (continue() == continue(1) 1 is the level of loop, if there is a loop inside loop and if it is 2, it skips current state of both loops.)
 * Array Pointer `next($array)`, `current($array)`, `reset($array)` 
 * Assigments are also a regular experession. If variable succesfully asigned then it returns true.
 ```php
@@ -112,6 +112,18 @@ while($var = current($array)){
     * Functions can be used before it is defined.
 
 * **Building Web Pages with PHP**
+    * Making link in html `<a href="page.php">CLICK HERE</a>`
+    * Sending a value to another page with query parameter.
+    For example PHP stores category and page id for this URL (`page.php?category=7&page=3`) in an associative array named `$_GET`
+    and we can access these ids with `$_GET['category']` and `$_GET['page']`   
+    and we can and more than one parameter by seperating  them with `&` 
+
+    ```php
+    <?php $link_name = "Second Page"; ?>
+    <?php $id= 2;?>
+    <a href="second_page.php?id=<?php echo $id;?>"><?php echo $link_name; ?></a>
+
+    ```
 
 
 
