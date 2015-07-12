@@ -38,8 +38,8 @@
 
 
 	<form action="form_process.php" method="post">
-		Username: <input type="text" name="username" value=""/><br/>
-		Password: <input type="password" name="password" value=""/><br/><br/>
+		Username: <input type="text" name="username" value="<?php echo htmlspecialchars(); ?>"/><br/>
+		Password: <input type="password" name="password" value="<?php echo htmlspecialchars(); ?>"/><br/><br/>
 		<input type="submit" name="submit" value="Submit"/> 
 	</form>
 	<br/><br/><br/><br/>

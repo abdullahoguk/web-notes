@@ -118,16 +118,47 @@ while($var = current($array)){
     and we can access these ids with `$_GET['category']` and `$_GET['page']`   
     and we can and more than one parameter by seperating  them with `&` 
 
+    * Reserved characters in URLs
+    `!` `#` `$` `%` `&` `'` `(` `)` `*` `+` `,` `/` `:` `;` `=` `?` `@` `[` `]`
+    to be able to use these characters in the URL, we must encode them with `urlencode($string)` (spaces become `+`) function, or `rawurlencode($string)`(spaces become `%20`) function. 
+        * `rawurlencode` is most compatible, and mostly using for characters before `?`.
+        * `urlencode` mostly using for characters after `?`. 
+
     ```php
     <?php $link_name = "Second Page"; ?>
     <?php $id= 2;?>
-    <a href="second_page.php?id=<?php echo $id;?>"><?php echo $link_name; ?></a>
+    <?php $company= "Johnson & Johnson";?>
+    <a href="second_page.php?id=<?php echo $id;?>&company=<?php echo $company;?>"><?php echo $link_name; ?></a>
 
     ```
-
-
+    * Reserved characters in HTML
+    `<` `>` `&` `"` to be able to use these characters in page, we must encode them with `htmlspecialchars($string)` or `htmlentities($string)`(also encode high level ascii chars like €,§,™ ...) in PHP. 
+    
+    * To include another php file `include("file.php")`
+    * `require("file.php")` is same with include, but it will throw error when file not found.
+    * Headers should be set in the very top of the code.
+    `header("content")`
+    * Redirecting to a link.`header("Location: path.php");exit;`
+    ```php
+    <?php 
+    function redirect_to($new_location)
+    header("Location: ".$new_location);
+    exit;
+     ?>
+    ```   
 
 * **Working with Forms and Form Data**
+    * Like `$_GET` in links, php keeps all form data in an associative array that we can access by `$_POST`
+    * There is two pages; the one that has the form that shoud be filled and the one that access that form data. Both are either be same pages or different. 
+    * Forms can be created like below. We can access data with name parameters.`$_POST['username']`
+    ```html
+    <form action="form_process.php" method="post">
+        Username: <input type="text" name="username" value=""/><br/>
+        Password: <input type="password" name="password" value=""/><br/><br/>
+        <input type="submit" name="submit" value="Submit"/> 
+    </form>
+    ```
+
 
 * **Working with Cookies and Sessions**
 
@@ -139,3 +170,8 @@ while($var = current($array)){
 
 * **Using Site Navigation to Choose Content**
 
+* **Application CRUD**
+
+* **Building the Public Area**
+
+* **Regulating Page Access**
