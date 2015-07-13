@@ -179,7 +179,7 @@ this loops run until it gets end of the array
 
 
 * **MySQL Basics**
-    * Accessing  MYSQL prompt in terminal `mysql -u root` or `mysql -u root -p`
+    * Accessing  MYSQL via terminal `mysql -u username -p` 
     * Show databases with ` SHOW DATABASES;`
     * Creating `CREATE DATABASE db_name;`
     * Using `USE db_name;`
@@ -191,7 +191,7 @@ this loops run until it gets end of the array
     IDENTIFIED BY 'password';
     ```
     * Showing privileges `SHOW GRANTS FOR 'username'@'localhost';`
-    * Showing tables of databes we are working on. `SHOW TABLES;`
+    * Showing tables in database we are working on. `SHOW TABLES;`
     * Creating table 
     ```mysql
     CREATE TABLE table_name(
@@ -213,7 +213,7 @@ this loops run until it gets end of the array
     -> PRIMARY KEY(id)
     -> );
     ```
-    * **CRUD**(Create, Read, Update, Delete)
+    * **CRUD** (Create, Read, Update, Delete)
         * SQL SELECT (read)(last two line is optional)
         ```mysql
         SELECT *
@@ -239,7 +239,7 @@ this loops run until it gets end of the array
         * SQL DELETE (delete)
         ```mysql
         DELETE FROM table
-        WHER id = 1;
+        WHERE id = 1;
         ``` 
 
 
