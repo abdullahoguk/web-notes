@@ -159,11 +159,92 @@ this loops run until it gets end of the array
         <input type="submit" name="submit" value="Submit"/> 
     </form>
     ```
-
+    * Validating form values
+        * `if(!isset($value)||empty($value))`
+        * String Length `if(strlen($value)<$min)` or `if(strlen($value)>$max)`
+        * Type `if(!is_string($value))` or `if(!in_array($value, $array))` or ...
+        * Format `if(!preg_match("reg_exp", $string))`
+        * Check databese for uniqeness.
+        * eg. `if(strpos($value,"@)" === false)` controls that e mail address is valid or not.  
+   
 
 * **Working with Cookies and Sessions**
+    * Setting cookie `setcookie($name, $value, $expire)`    
+    (eg. `$name="test"` `$value=40` `$expire=time()+(60*60*24*7)` time() returns current time and this cookie has 7 days lifetime)
+    * Setting cookie is adding a header to the page. We should set in the very top of the page unless output buffering is turned on.
+    
+    * Getting value from cookie `$_COOKIE[$name]`
+    * Unsetting cokie `setcookie($name, null)`
+    * Sessions
+
 
 * **MySQL Basics**
+    * Accessing  MYSQL prompt in terminal `mysql -u root` or `mysql -u root -p`
+    * Show databases with ` SHOW DATABASES;`
+    * Creating `CREATE DATABASE db_name;`
+    * Using `USE db_name;`
+    * Dropping database `DROP DATABASE db_name;`
+    * Giving permission to a user to acces databese. 
+    ```mysql
+    GRANT ALL PRIVILEGES ON db_name.* 
+    TO 'username'@'localhost' 
+    IDENTIFIED BY 'password';
+    ```
+    * Showing privileges `SHOW GRANTS FOR 'username'@'localhost';`
+    * Showing tables of databes we are working on. `SHOW TABLES;`
+    * Creating table 
+    ```mysql
+    CREATE TABLE table_name(
+    column_name1 definition,
+    column_name2 definition,
+    colomn_name3 definition,
+    options
+    );
+    ```
+    * Showing columns `SHOW COLUMNS FROM table_name;`
+    * Dropping table `DROP TABLE table_name;`
+    * eg. 
+    ```mysql
+       CREATE TABLE subjects ( 
+    -> id INT(11) NOT NULL AUTO_INCREMENT,
+    -> menu_name VARCHAR(30) NOT NULL, 
+    -> position INT(3) NOT NULL,
+    -> visible TINYINT(1) NOT NULL,
+    -> PRIMARY KEY(id)
+    -> );
+    ```
+    * **CRUD**(Create, Read, Update, Delete)
+        * SQL SELECT (read)(last two line is optional)
+        ```mysql
+        SELECT *
+        FROM table
+        WHERE column = 'some_text'
+        ORDER BY column1 ASC;
+        ```
+
+        * SQL INSERT (create)
+        ```mysql
+        INSERT INTO table (column1, column2, column3)
+        values (val1, val2, val3);
+        ```
+
+        * SQL UPDATE (update)
+        ```mysql
+        UPDATE table
+        SET column1 = 'some_text'
+        WHERE id = 1;
+        ``` 
+
+
+        * SQL DELETE (delete)
+        ```mysql
+        DELETE FROM table
+        WHER id = 1;
+        ``` 
+
+
+
+
 
 * **Using PHP to Access MySQL**
 
