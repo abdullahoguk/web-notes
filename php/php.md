@@ -99,7 +99,8 @@
 while($var = current($array)){
     Statements;
 }
-``` this loops run until it gets end of the array
+``` 
+this loops run until it gets end of the array
 
 * **Functions**
     * 
@@ -150,7 +151,7 @@ while($var = current($array)){
 * **Working with Forms and Form Data**
     * Like `$_GET` in links, php keeps all form data in an associative array that we can access by `$_POST`
     * There is two pages; the one that has the form that shoud be filled and the one that access that form data. Both are either be same pages or different. 
-    * Forms can be created like below. We can access data with name parameters.`$_POST['username']`
+    * Forms can be created like below. `action` is the file that we want to access data in. We can access data with name parameters.`$_POST["username"]`
     ```html
     <form action="form_process.php" method="post">
         Username: <input type="text" name="username" value=""/><br/>
