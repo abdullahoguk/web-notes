@@ -23,7 +23,15 @@
 	else{
 		echo "You have not submitted yet!";
 	}
-	 		
+
+		$dbhost = "localhost";
+		$dbuser = "ogk";
+		$dbpass = "aoguk*1102";
+		$dbname = "my_db";
+		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+	 	
+		$query = "SELECT * FROM subjects";
+	 	$result = mysqli_query($connection, $query);
 	 	 ?>
 	 	 <br/><br/><br/>
 		
@@ -52,6 +60,27 @@
 		<input type="submit" name="submit2" value="Submit"/> 
 	</form>
 
+
+
+	<?php
+    while ($row = mysqli_fetch_row($result)){
+    var_dump($row);
+    echo "<hr />";}
+    ?>
+    <hr /><hr />
+
+    <?php
+    while ($row = mysqli_fetch_assoc($result)){
+    var_dump($row);
+    echo "<hr />";}
+    
+    echo "<br />";
+    echo $row["id"]."<br />";
+    echo $row["menu_name"]."<br />";
+    echo $row["position "]."<br />";
+
+    ?>
 </body>
 </html>
+<?php mysqli_close($connection_name);?>
 

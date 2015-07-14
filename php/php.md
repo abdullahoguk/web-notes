@@ -1,4 +1,4 @@
-##PHP
+##PHP & MYSQL
 * All PHP codes should be inside of `<?php [PHPcode]  ?>` tag.
 * Extension of file should be `.php`.
 * `echo` outputs code to html . `echo "Hello<br/>World"`
@@ -241,12 +241,29 @@ this loops run until it gets end of the array
         DELETE FROM table
         WHERE id = 1;
         ``` 
-
-
-
-
-
+   
 * **Using PHP to Access MySQL**
+    * APIs > `mysql`, `mysqli` and `PDO`
+    * Creating database connection
+        * assign `mysqli_connect($dbhost, $dbuser, $dbpass, $dbname)` to a variable.
+        * `mysqli_connect_error()` and `mysqli_connect_errno()` shows errors. 
+    * Performing database query.
+    `mysqli_query($connection_name, $query)`
+    * Using returned data
+    `mysqli_fetch_row($returned_data)`  results are in a standard array and keys are integers.   
+    `mysqli_fetch_assoc($returned_data)` results are in a associative array and keys are column names.     
+    `mysqli_fetch_array($returned_data)` results are in either or both types of arrays.   
+    ```
+    while ($row = mysqli_fetch_row($result)){
+    var_dump($row);
+    echo "<hr />";
+    }
+    ```
+    * Releasing returned data. 
+    `mysql_free_result($result)`
+
+    * Closing database connection
+    `mysqli_close($connection_name)`
 
 * **Building a Content Management System (CMS)**
 
