@@ -265,6 +265,12 @@ this loops run until it gets end of the array
     * Closing database connection
     `mysqli_close($connection_name)`
 
+    * Other Functions
+        * `mysqli_affected_rows($connection)` returns number of rows that were affected by last change. 
+        * `mysqli_real_escape_string($connection, $string)` adds backslashes in proper places to avoid sql injection.
+        ...
+
+
 * **Building a Content Management System (CMS)**
 
 * **Using Site Navigation to Choose Content**
