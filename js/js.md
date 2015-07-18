@@ -1,5 +1,4 @@
 ##Javascript
-
 * Adding javascript to page
 `<script>document.write("<p>Hello</p>")</script>`
 or `<script src = "js/myscript.js"></script>`
@@ -13,3 +12,15 @@ or `<script src = "js/myscript.js"></script>`
     * String > Number `Number("85")`
     * Number > String `String(85)` or `85 + ""`
 * Fetching element from html by id `document.getElementById("id")`
+* If,else,for,while statements are same with php and java ...
+* Functions
+    all passed arguments to function stored in an array called "arguments"
+```
+function func_name(var1,..){
+... 
+arguments[1]
+arguments[2]
+arguments.length();//returns how many arguments passed.
+return x;
+}
+```
