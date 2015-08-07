@@ -24,3 +24,20 @@ arguments.length();//returns how many arguments passed.
 return x;
 }
 ```
+* **Arrays**
+    * Defining `var array = []` or `var array = [4,7,12]`
+    * Getting length `array.length()`
+    * Arrays grows dynamicly.
+    * `array.push("elmnt")` adds "elmnt" item to end of the array.
+    * `array.pop()` retuns and deletes last element of array.
+    * `array.unshift("elmnt")` adds one or more elements to the beginning of the array.
+    * `array.shift()` removes and returns first element then shifts array to thet blank field.
+    * `array.concat(array2)` returns concatanated form of two arrays.(arrayarray2)
+    * `delete array[5]` removes element in 5th index (actually mak that index undefined.) 
+    * `array.reverse()` just reverses array.
+    * Slice
+    	* `array.slice(2, 7)` returns elements from index 2 to 7 in array. 
+    	* `array.slice(2)` means from 2 to last
+    	* `array.slice(2, -3)` from 2 to, 3 before last index
+    *  
+
