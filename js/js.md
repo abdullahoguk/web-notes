@@ -99,10 +99,12 @@ func_name(1,5,7); // == func_name(1,5); extra parameters will be ignored
 		c = myList.childNodes.length; //retuns how many child nodes that node have
 		```
 	* Working With Attributes   
+
 		```javascript
 		myElement.getAttribute("align"); //returns attribute value of myElement
 		myElement.setAttribute("align","left"); //set attribute value
 		```
+		   
 	* Creating DOM Element (for adding content to document)
 		```javascript
 		var myNewElement = document.createElement("li");
