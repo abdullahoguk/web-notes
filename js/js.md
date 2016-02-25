@@ -62,7 +62,7 @@ func_name(1,5,7); // == func_name(1,5); extra parameters will be ignored
 	var timeOfSth = Date(2000,0,1) //1 Jan 2000 (!!! month is from 0 to 11)
 	today.getMonth(); // returns 0..11
 	today.getFullYear(); //2016
-	today.getDate; //returns the day of month (1-31)
+	today.getDate(); //returns the day of month (1-31)
 	today.getDay(); //returns 0-6 day of the week
 	today.getHours(); // 0-23
 	today.setMonth(5); //etc.
@@ -85,5 +85,34 @@ func_name(1,5,7); // == func_name(1,5); extra parameters will be ignored
 	* Document is the html file where js file called.
 	* Model 
 	![alt text](model.png)
-	* 
+	* Node is every element that has id.
+	* You can get element with `document.getElementById("idname")`
+	* You can get same tags with `document.getElementsByTagName("p")`
+	* Let `ul` tag above has id of "abc"    
+		```javascript
+		var myList = document.getElementById("abc");
+		var myAllListItems = document.getElementsByTagName("li"); //returns array contains all "li" tags in document
+		var myListItems = myList.getElementsByTagName("li"); //returns array contains all "li" tags in ul tag has id of "abc"
+		a = myList.nodeType; //returns type of node
+		b = myList.innerHTML; //retuns html code of that node
+		c = myList.childNodes.length; //retuns how many child nodes that node have
+		```
+	* Working With Attributes
+		```javascript
+		myElement.getAttribute("align"); //returns attribute value of myElement
+		myElement.setAttribute("align","left"); //set attribute value
+		```
+	* Creating DOM Element (for adding content to document)
+		```javascript
+		var myNewElement = document.createElement("li");
+		myList.appendChild(myNewElement); //add it at the end of the list
+		var myText = document.createTextNode("Text of new list item");
+		myNewElement.appendChild(myText); 
+
+		var secondItem = myList.getElementsByTagName("li")[1]; //gets second list item
+		myList.insertBefore(myNewElement, secondItem); insert new list item before the second list item 
+		```
+
+* **Events and Event Listeners**
+
 
