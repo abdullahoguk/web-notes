@@ -89,7 +89,7 @@ func_name(1,5,7); // == func_name(1,5); extra parameters will be ignored
 	* You can get element with `document.getElementById("idname")`
 	* You can get same tags with `document.getElementsByTagName("p")`
 	* Let `ul` tag above has id of "abc"   
-	   
+
 		```javascript
 		var myList = document.getElementById("abc");
 		var myAllListItems = document.getElementsByTagName("li"); //returns array contains all "li" tags in document
@@ -98,7 +98,7 @@ func_name(1,5,7); // == func_name(1,5); extra parameters will be ignored
 		b = myList.innerHTML; //retuns html code of that node
 		c = myList.childNodes.length; //retuns how many child nodes that node have
 		```
-	* Working With Attributes
+	* Working With Attributes   
 		```javascript
 		myElement.getAttribute("align"); //returns attribute value of myElement
 		myElement.setAttribute("align","left"); //set attribute value
