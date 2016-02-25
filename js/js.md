@@ -88,7 +88,8 @@ func_name(1,5,7); // == func_name(1,5); extra parameters will be ignored
 	* Node is every element that has id.
 	* You can get element with `document.getElementById("idname")`
 	* You can get same tags with `document.getElementsByTagName("p")`
-	* Let `ul` tag above has id of "abc"    
+	* Let `ul` tag above has id of "abc"   
+	   
 		```javascript
 		var myList = document.getElementById("abc");
 		var myAllListItems = document.getElementsByTagName("li"); //returns array contains all "li" tags in document
