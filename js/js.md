@@ -104,7 +104,8 @@ func_name(1,5,7); // == func_name(1,5); extra parameters will be ignored
 		myElement.getAttribute("align"); //returns attribute value of myElement
 		myElement.setAttribute("align","left"); //set attribute value
 		```
-		   
+		
+
 	* Creating DOM Element (for adding content to document)
 		```javascript
 		var myNewElement = document.createElement("li");
@@ -116,6 +117,73 @@ func_name(1,5,7); // == func_name(1,5); extra parameters will be ignored
 		myList.insertBefore(myNewElement, secondItem); insert new list item before the second list item 
 		```
 
+
 * **Events and Event Listeners**
+	* Event names `onload` `onclick` `onmauseover` `onblur` `onfocus`
+	* Handling event 
+	```javascript
+	myelement.onclick = function(){
+	//Event handler code
+	//..
+	};
+	```
+
+	or `document.addEventListener('onclick',myFunction, false;)` 
+
+	```
+
+	* `window.onload` runs when every content in the page is loaded.
+	* `onfocus` : runs when clicked to a forrm field
+	* `onblur`  : runs when leaved from a form field 
+	* `onchange` `onkeypress` `onkeydown` `onkeyup` 
+	* Timers   
+	```javascript
+	setTimeout(myFunction, 5000);//Just runs once after 5 sec 
+	setInterval(changeImage, 5000); runs in every 5 sec
+	```
+
+* **Forms** `document.forms.nameProperty`
+	* Text Fields
+	```javascript
+	myTextField = document.getElementById("nameForm");
+	myTextField.value //Property can be used for get/set value
+	//Events: onfocus, onblur, onchange, onkeypress, onkeydown, onkeyup
+	```
+
+	* Radio button or CheckBoxes
+	```javascript
+	myCheckBox = document.getElementById("Tick");
+	myCheckBox.checked //returns true or false
+	//Events: onclick, onchange
+	```
+
+	* Select List
+	```javascript
+	mySList = document.getElementById("List");
+	mySList.type //returns select-one or select-multiple
+	mySList.selectedIndex //returns array index of which item selected (for select-one)
+	mySList.options[i].selected //returns true if ith item in the list is selected
+	//Events: onchange
+    ```
+
+	* Form itself
+	```javascript
+	return false; //can be written inside onsubmit function to stop submiting form (for validation purposes)
+	//Events: onsubmit
+	```
+* **Style** (myElement.style)
+	
+	```javascript
+	myElement.style.display = "block"; //hides that element ("none" to show)
+	myElement.style.color = "#ff0000";
+	myElement.style.left ="40px";
+	myElement.style.fontWeight = "bold";
+	//the properties in Css with - (dash) will become camelCased in JS 
+	myelement.className = "someCSSclass";
+
+
+	```
+
+
 
 
