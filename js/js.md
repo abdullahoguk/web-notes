@@ -142,7 +142,7 @@ func_name(1,5,7); // == func_name(1,5); extra parameters will be ignored
 	setInterval(changeImage, 5000); runs in every 5 sec
 	```
 
-* **Forms** `document.forms.nameProperty`
+* **Forms** `document.forms.nameProperty`   
 	* Text Fields
 	```javascript
 	myTextField = document.getElementById("nameForm");
@@ -171,6 +171,7 @@ func_name(1,5,7); // == func_name(1,5); extra parameters will be ignored
 	return false; //can be written inside onsubmit function to stop submiting form (for validation purposes)
 	//Events: onsubmit
 	```
+
 * **Style** (myElement.style)
 	
 	```javascript
@@ -180,8 +181,6 @@ func_name(1,5,7); // == func_name(1,5); extra parameters will be ignored
 	myElement.style.fontWeight = "bold";
 	//the properties in Css with - (dash) will become camelCased in JS 
 	myelement.className = "someCSSclass";
-
-
 	```
 
 
