@@ -13,7 +13,7 @@
     * `$('#id_name').parent()` or `$('#id_name').child()` returns parent/child node
     * `('#id_name').parents('.class_name')` returns first object's all parents that has class of "class_name". 
     * `('#id_name').closest('.class_name')` returns first object's closest parent that has class of "class_name".
-    * `$('h1').addClass('className')` or `$('h1').removeClass('className')` add/remove class from that object. 
+    * `$('h1').addClass('className')` or `$('h1').removeClass('className')` or `$('h1').toggleClass('className')` add/remove/toggle class from that object. 
     * `$("h1").text();` returns ext of that element.
     * `$("h1").text("new text");` replaces text of that element.
     * To be able to run code when DOM is ready (onload in JS)
@@ -36,8 +36,18 @@ add it as last child.
     * `$('button').on('click', function(){ $('button').remove(); });` Runs when any button clicked and removes all buttons.
     * `$('button').on('click', function(){ $(this).remove();});` Runs when any button clicked and removes only the button that clicked.
     * `$('.vacation').on('click' ,'button', function(){ $(this).remove();});` Runs when a button that has "vacation" class clicked.  
+    * EVENTS 
+        * Mouse:`click` `dblclick` `focusin` `focusout` `mousedown` `mouseup` `mousemove` `mouseout` `mouseover` `mouseleave` `mouseenter` 
+        * Keyboard `keypress` `keydown` `keyup` 
+        * Form `blur` `select` `change` `focus` `submit`
+        * ` event.stopPropagation(); event.preventDefault();`
+    * jQuery Object Methods
+        * `slideUp` `slideDown` `slideToggle` 
+        * `fadeIn` `fadeOut` `fadeToggle`
+
+
     * Example
-    ```
+    ```javascript
     //HTML  >>>  
     <li class="vacation onsale" data-price="300"> <button></button> </li>
     //JS-jQ >>> 
@@ -46,6 +56,28 @@ add it as last child.
          var price = $('<p>Prices start from $'+amount+'</p>');
         $(this).closest('vacation').append(price);
     });
+
+
+
+    //Show/hide images when the button is clicked
+    $(document).ready(function() { 
+        $("#tour").on('click', 'button', function() { 
+            $('.photos').slideToggle(); //'slideUp' 'slideDown' 'slideToggle'
+        });
+    });
+
    
     ```
-    * 
+
+* Styling
+    * CSS
+        * `.css(<attr>, <value>);`  
+            >>> `$(this).css('color', '#252b30');`
+        * `.css(<object>);`
+            >>> `$(this).css({'background-color': '#252b30', 'border-color': '1px solid #967'});`
+        * `.show()` and `.hide()` methods == `.css('display', 'block')` 
+    * Animation
+        * `.animate(<object>);` applies this css as animation (slowly)
+        * `.animate(<object>,<speed>);`
+
+
