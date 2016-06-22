@@ -14,7 +14,7 @@
     * `('#id_name').parents('.class_name')` returns first object's all parents that has class of "class_name". 
     * `('#id_name').closest('.class_name')` returns first object's closest parent that has class of "class_name".
     * `$('h1').addClass('className')` or `$('h1').removeClass('className')` or `$('h1').toggleClass('className')` add/remove/toggle class from that object. 
-    * `$("h1").text();` returns ext of that element.
+    * `$("h1").text();` returns text of that element.
     * `$("h1").text("new text");` replaces text of that element.
     * To be able to run code when DOM is ready (onload in JS)
     ```jquery
@@ -65,7 +65,6 @@ add it as last child.
             $('.photos').slideToggle(); //'slideUp' 'slideDown' 'slideToggle'
         });
     });
-
    
     ```
 
@@ -79,5 +78,35 @@ add it as last child.
     * Animation
         * `.animate(<object>);` applies this css as animation (slowly)
         * `.animate(<object>,<speed>);`
+        * `$("#p1").css("color","red").slideUp(1900).slideDown(1700);` first it changes color to red then slide up then slide down.
+   
+   
+* **AJAX**
+    * 
+    ```
+    $.ajax('.../sample.html',{
+        success: function(response){
+         //things to do when request successfully responded
+        },
+        error: function(request,errorType, errorMessage){
+            alert('Error: '+ errorType + ' with message: '+ errorMessage);
+        },
+        timeout: 3000, //how log request should wait
+        beforeSend: function(){
+            //things to do before ajax request like loaing screen
+        },
+        complete: function(){
+            runs after both success and error
+        }
+
+    });
+    ```
+    * or
+    ```
+    $.get('.../sample.html',function(response){
+         //things to do when request successfully responded
+    });
+    ```
+
 
 

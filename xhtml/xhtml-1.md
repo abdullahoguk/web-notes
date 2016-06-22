@@ -107,4 +107,15 @@
 		`<meta name="Keywords" content="keyword1, keyword 2">`
    
 * Vaildate your website from http://validator.w3.org
-	
+
+* **HTML 5**
+	* Redirect page in 3 sec  `<meta http-equiv="refresh" content="3; url=redirect.html"/>`
+	* To run a pdf or html in part of the page.
+```
+<object data="file.pdf" type="application/pdf" 
+width="750" height="400"></object>
+
+<object data="file.html" type="text/html" 
+width="750" height="400"></object>
+```
+

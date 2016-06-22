@@ -6,7 +6,9 @@ or `<script src = "js/myscript.js"></script>`
 * `==` sign compares equality of values of two variables and also return true even if they have different types.
 * Unlike two equal sign, `===` compares equality of types and values of two variables.
 * putting `;` at the end of statements is not required but suggested.
-* `var` is also not required when defining variables but sugg ested.
+* `var` is also not required when defining variables but suggested.
+* `alert("asdsa");` pops alert window
+* `name=window.prompt("Name","default");` pops input window
 
 * **Type Casting**
     * String > Number `Number("85")`
