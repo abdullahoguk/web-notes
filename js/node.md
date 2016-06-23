@@ -64,4 +64,123 @@ var Person = function(name){
 util.inherits(Person,EventEmitter);
 
 ```
-* Make a js file a module to reuse in other js files, `module.exports=FileName;` 
+* Make a js file a module to reuse in other js files, `module.exports = object_name;` 
+* Execute terminal commands
+```
+var exec = require("child_process").exec;
+exec("xfce4-terminal");
+exec("ls", function(err, stdout){
+    if (err){throw err;}
+    else{console.log(stdout)}
+    
+});
+```
+* **FILESYSTEM** `var fs = require("fs");`
+     * Listing
+```
+var files = fs.readdirSync("./lib");
+console.log(files);
+```
+    * ReadFile
+```
+var contents = fs.readFileSync("d3.md","UTF-8")
+```
+    * Write to file
+```
+//Creates file
+fs.writeFile("filename.md", content_string, function(err){
+    console.log("ddfd");
+})
+
+//Appends content to a file
+fs.appendFile("filename.md", content_string,function(){  })
+```
+    * Create and remove directory
+```
+control existence of folder
+if(fs.existSync("folderName")){
+    ...
+}
+else{
+    //Creates directory
+    fs.mkdir("folderName", function(err){
+    console.log("Folder created");
+    });    
+}
+
+//remove dir(dir shoud be empty)
+fs.rmdir("folderName", function(err){
+    console.log("Folder removed");
+    });
+
+```
+    * Move,rename,remove a file
+```
+//rename file or folder
+fs.renameSync("fileName_with_dir","NEWfileName_with_dir");
+
+//for move, use rename and change dir in second argument
+
+//remove
+fs.unlinkSync("fileName_with_dir");
+```
+    * Readable streams
+```
+var stream = fs.createReadStream("fileName","UTF-8");
+var data = "";
+
+//runs once when the first data event happen
+stream.once("data",function(){
+  ...
+});
+
+
+stream.on("data",function(chunk){
+   process.stdout.write("chunksize "+ chunk.length);
+   data += chunk;
+});
+
+//runs when the stream ends
+stream.on("end",function(){
+   ...
+});
+```
+    * Writable streams
+```
+var stream = fs.createWriteStream("fileName");
+stream.write("Content string");
+stream.close();
+```
+* **HTTP**
+    * create basic http server
+```
+var http=require("http");
+http.createServer(function(request,response){
+response.writeHead(200,{"Content-Type":"html"});
+response.write("<h1>WELCOME TO HTTP SERVER<h1>");
+response.end();
+}).listen(8888);
+```
+    * create basic https request
+```
+var http=require("https");
+var fs = require("fs");
+
+var options = {
+    hostname: "en.wikipedia.org",
+    port: 443,
+    path: "wiki/George_Washington",
+    method: "GET"
+};
+
+//Response is a stream
+var req = https.request(options, function(response){
+    var responseBody = "";
+    console.log("Status: " + response.statusCode + "\nResponse Headers: " + response.headers);
+
+    response.setEncoding("UTF-8");
+});
+req.end();
+
+
+```
