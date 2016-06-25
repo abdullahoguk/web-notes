@@ -155,11 +155,14 @@ stream.close();
     * create basic http server
 ```
 var http=require("http");
-http.createServer(function(request,response){
-response.writeHead(200,{"Content-Type":"html"});
-response.write("<h1>WELCOME TO HTTP SERVER<h1>");
-response.end();
-}).listen(8888);
+
+var server = http.createServer(function(request,response){
+    response.writeHead(200,{"Content-Type":"text/html"});
+    response.write("<h1>WELCOME TO HTTP SERVER<h1>");
+    response.end();
+});
+
+server.listen(8888);
 ```
     * create basic https request
 ```
@@ -181,6 +184,40 @@ var req = https.request(options, function(response){
     response.setEncoding("UTF-8");
 });
 req.end();
+```
+    * create basic file server
+```
+var http = require("http");
+var fs = require("fs");
+var path = require("path");
 
+//create server
+http.createServer(function(request,response){
+    console.log(`${request.method} requests for ${request.url}`)
 
+    if(request.url === "/"){
+        //homepage file is in public folder
+        fs.readFile("./public/index.html","UTF-8",function(err,content){
+            response.writeHead(200,{"Content-Type":"text/html"});
+            response.end(content);   
+        });
+    else if (request.url.match(/.css$/)) {
+        var cssPath = path.join(__dirname, 'public', request.url);
+        var fileStream = fs.createReadStream(cssPath, "UTF-8");
+
+        response.writeHead(200, {"Content-Type": "text/css"});
+        fileStream.pipe(response);
+
+    } else if (request.url.match(/.jpg$/)) {
+        var imgPath = path.join(__dirname, 'public', request.url);
+        var imgStream = fs.createReadStream(imgPath);
+
+        response.writeHead(200, {"Content-Type": "image/jpeg"});
+        imgStream.pipe(response);
+    }else{
+        response.writeHead(404,{"Content-Type":"text/html"});
+        response.end("404 file not found")
+    }
+
+}).listen(8888);
 ```

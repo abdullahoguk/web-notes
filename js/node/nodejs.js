@@ -1,4 +1,4 @@
-var c = require("path"); 
+var path = require("path"); 
 
 
 
@@ -11,7 +11,7 @@ console.log(__filename);
 console.log(__dirname);
 
 //GLOBAL Require
-console.log(c.basename(__filename));
+console.log(path.basename(__filename));
 
 //GLOBAL Process
 console.log(process.argv);
@@ -167,7 +167,7 @@ var files = fs.readdirSync("..");
 console.log("\n\nFS LIST >>"+ files);
 
 //reading sync
-var contents = fs.readFileSync("d3.md","UTF-8");
+var contents = fs.readFileSync("../d3.md","UTF-8");
 console.log("\n\n***********D3.MD FILE********* \n" + contents);
 /*async
 var contents = fs.readFile("d3.md","UTF-8",function(err,contents){
@@ -197,10 +197,12 @@ fs.mkdir("folderName", function(err){
 //**************create basic http server
 var http=require("http");
 http.createServer(function(request,response){
-response.writeHead(200,{"Content-Type":"html"});
-response.write("<h1>WELCOME TO HTTP SERVER<h1>");
-response.end();
+    console.log(`${request.method} requests dump server for ${request.url}`)
+    response.writeHead(200,{"Content-Type":"html"});
+    response.write("<h1>WELCOME TO a Dump HTTP SERVER<h1>");
+    response.end();
 }).listen(8888);
+
 
 
 //*************HTTPS Request
@@ -247,5 +249,39 @@ req.on("error",function(err){
 });
 
 req.end();
+
+
+
+//***************FILE SERVER
+//create server
+http.createServer(function(request,response){
+    console.log(`${request.method} requests fileserver for ${request.url}`)
+
+    if(request.url === "/"){
+        //homepage file is in public folder
+        fs.readFile("./public/index.html","UTF-8",function(err,content){
+            response.writeHead(200,{"Content-Type":"text/html"});
+            response.end(content);   
+        });
+
+    }else if (request.url.match(/.css$/)) {
+        var cssPath = path.join(__dirname, 'public', request.url);
+        var fileStream = fs.createReadStream(cssPath, "UTF-8");
+
+        response.writeHead(200, {"Content-Type": "text/css"});
+        fileStream.pipe(response);
+
+    }else if (request.url.match(/.jpg$/)) {
+        var imgPath = path.join(__dirname, 'public', request.url);
+        var imgStream = fs.createReadStream(imgPath);
+
+        response.writeHead(200, {"Content-Type": "image/jpeg"});
+        imgStream.pipe(response);
+    }else{
+        response.writeHead(404,{"Content-Type":"text/html"});
+        response.end("404 file not found")
+    }
+
+}).listen(7777);
 
 
