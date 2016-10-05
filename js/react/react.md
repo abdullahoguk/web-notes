@@ -1,19 +1,19 @@
 ##React
 
 * Add `react.js` and `react-dom.js` (and `browser.js` from babel-core )
-* `JSX` is xml syntax inside of JS 
-* Rendering sth   
+* `JSX` is xml syntax inside of JS
+* Rendering sometingh
 ```
-<script type ="text/babel">
+    <script type ="text/babel">
         ReactDOM.render(
             <h1>Hello</h1>,
             document.getElementById("area")
             );
 
-        </script>
-```   
-* Write JS expressions inside `{}`
-* **Component** (name should like "CompName")
+    </script>
+```
+* Write JS code and expressions inside `{}`
+* **Component** (naming should like "CompName")
 ```
 <script type ="text/babel">
     var HelloComp = React.createClass({
@@ -31,9 +31,10 @@
         document.getElementById("area")
     );
 </script>
-```   
-* **Props** stores data (like attributes in html tags) 
-```   
+```
+* **Props** stores data (like attributes in html tags)
+
+```
 <script type ="text/babel">
     var HelloComp = React.createClass({
         //defines default values of props
@@ -62,5 +63,54 @@
 
         document.getElementById("area")
     );
-</script>
-```   
+    </script>
+```
+* Conditioals
+
+* **States**
+
+```
+var HelloComp = React.createClass({
+    propTypes:{
+        name: React.PropTypes.string
+    },
+
+
+    //defines default values of props
+    getDefaultProps: function(){
+        return {
+            name: "There"
+        }
+    },
+
+    getInitialState: function() {
+        return {
+            value: 1
+
+        }
+    },
+
+    componentDidMount: function() {
+        this.setState({
+            value: this.state.value + 15
+        });
+    },
+
+    changeState: function(){
+        this.setState({
+            value: this.state.value + 1}
+    )},
+
+    render: function() {
+        return (
+            <div className="helloComp">
+                <h3>Hello {this.props.name}</h3>
+                <p>
+                    State: {this.state.value}
+                </p>
+                <button onClick= {this.changeState} type="button" name="button">Increase state</button>
+            </div>
+        );
+}
+});
+```

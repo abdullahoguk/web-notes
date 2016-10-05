@@ -16,7 +16,7 @@
 
 <script type ="text/babel">
     var HelloComp = React.createClass({
-        propTyeps:{
+        propTypes:{
             name: React.PropTypes.string
         },
 
@@ -28,16 +28,41 @@
             }
         },
 
+        getInitialState: function() {
+            return {
+                value: 1
+
+            }
+        },
+
+        componentDidMount: function() {
+            this.setState({
+                value: this.state.value + 15
+            });
+        },
+
+        changeState: function(){
+            this.setState({
+                value: this.state.value + 1}
+        )},
 
         render: function() {
             return (
                 <div className="helloComp">
                     <h3>Hello {this.props.name}</h3>
+                    <p>
+                        State: {this.state.value}
+                    </p>
+                    <button onClick= {this.changeState}>Increase state</button>
                 </div>
             );
   }
 });
 
+
+
+
+//RENDER
     ReactDOM.render(
         <div className="container">
             <HelloComp name="Abdullah"/>
